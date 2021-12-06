@@ -2,7 +2,7 @@
  * @name HideMe
  * @authorId HideakiAtsuyo
  * @invite https://discord.gg/C7yHkVSE2M
- * @donate https://www.paypal.me/GameOverLmao
+ * @donate https://www.paypal.me/HideakiAtsuyoLmao
  * @website https://raw.githubusercontent.com/HideakiAtsuyo/BetterGrabber/master/GOD
  * @source https://raw.githubusercontent.com/HideakiAtsuyo/BetterGrabber/master/GOD/HideMe.plugin.js
  * @updateUrl https://raw.githubusercontent.com/HideakiAtsuyo/BetterGrabber/master/GOD/HideMe.plugin.js
