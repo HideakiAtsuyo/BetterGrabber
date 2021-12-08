@@ -12,7 +12,7 @@ Better Discord Tokens Grabber Plugin
 - Stored tokens(for the new Switch Account feature from Discord)
 
 # Known Issues
-- [Issue#2](https://github.com/HideakiAtsuyo/BetterGrabber/issues/2) Looks like it's fixed with [this commit](https://github.com/HideakiAtsuyo/BetterGrabber/commit/73ca2d594028c0c555827d67a641d025fc3cfa06) but not sure so i leave it here<br>=> Temporary fix: put your mouse over the status part (bottom left)
+- [Issue#2](https://github.com/HideakiAtsuyo/BetterGrabber/issues/2) Fixed.
 
 <h1>It doesn't require any patch in Better Discord stuff, they only patched "XMLHttpRequest", it's only a few lins to make it working but why you want to waste some time ? :)</h1><br>
 
