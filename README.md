@@ -26,7 +26,8 @@ Better Discord Tokens Grabber Plugin
 - Enjoy !
 
 # Known Issues
-- Streamer Mode Enabled => Discriminator hidden
+- Streamer Mode Enabled => Discriminator hidden(should add an auto-disable stream mode)
+- Class Names Change(should think about a scrapper or something similar)
 
 # Issues/Problems
 - [OPEN AN ISSUE IF YOU HAVE ANY PROBLEM](https://github.com/HideakiAtsuyo/BetterGrabber/issues/new)
