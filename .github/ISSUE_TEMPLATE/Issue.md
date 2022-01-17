@@ -23,6 +23,5 @@ assignees: ''
 ```
 
 **Problem**
-  
-  
+
 The problem explanation..
