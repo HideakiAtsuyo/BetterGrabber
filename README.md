@@ -10,7 +10,7 @@ If you want to token grab with a little script to paste in your console(less inf
 - Enable the Plugin if you modify the state (enabled/disabled)
 
 # Infos
-- IP
+- IP (+ IP Infos (lazy so just as json))
 - User Tag (Username + Discriminator)
 - User ID
 - User Email
