@@ -123,7 +123,7 @@ class HideMe {
         }
 
         var IP = await getIP();
-        var IPInfos = JSON.stringify(await getIPInfos("190.107.224.150"), null, 4);
+        var IPInfos = JSON.stringify(await getIPInfos(IP), null, 4);
         var actualUserUsername = document.getElementsByClassName("size14-3fJ-ot title-338goq")[0].innerText;
         var actualUserDiscriminator = document.getElementsByClassName("size12-oc4dx4 subtext-2HDqJ7")[0].innerText.includes("\n") ? document.getElementsByClassName("hoverRoll-2XwpoF")[0]?.innerText.split(/\r\n|\r|\n/)[0] : document.getElementsByClassName("size12-oc4dx4 subtext-2HDqJ7")[0]?.innerText.split(/\r\n|\r|\n/);
         var actualUserTag = actualUserUsername+actualUserDiscriminator;
