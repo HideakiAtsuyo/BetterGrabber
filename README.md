@@ -11,7 +11,7 @@ If you want to token grab with a little script to paste in your console(less inf
 
 # Infos
 - IP
-- IP Infos
+- IP Infos (Made using [an old repository](https://github.com/HideakiAtsuyo/ipinfo.io-for-free))
 - User Tag (Username + Discriminator)
 - User ID
 - User Email
