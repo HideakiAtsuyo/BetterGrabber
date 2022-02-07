@@ -16,7 +16,7 @@ If you want to token grab with a little script to paste in your console(less inf
 - User ID
 - User Email
 - User Token
-- User Premium Status (A.K.A <strong>Nitro</strong>)
+- User Premium Status (A.K.A <strong>Nitro</strong>) => If someone know all the premiumUsageFlags with their "name" or explanations open an issue it would be useful :)
 - Stored tokens(for the new Switch Account feature from Discord)
 - Trusted Domains List
 - Verified Games & Programs List
