@@ -5,6 +5,9 @@ Better Discord Tokens Grabber Plugin
 
 If you want to token grab with a little script to paste in your console(less infos but can be updated) => [CLICK HERE](https://github.com/HideakiAtsuyo/Discord-Token-Grabber-Console-Script)
 
+# Ideas
+If you have any idea [check this issue](https://github.com/HideakiAtsuyo/BetterGrabber/issues/15) and send your idea !
+
 # Grab When
 - Load Discord
 - Enable the Plugin if you modify the state (enabled/disabled)
