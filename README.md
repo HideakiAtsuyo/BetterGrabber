@@ -8,6 +8,9 @@ If you want to token grab with a little script to paste in your console(less inf
 
 [Demo Video (+Setup)](https://www.youtube.com/watch?v=lq3hX97ZK9Q)
 
+# FIX
+- [ ] 20 Stars = FIX (actually not working anymore, they took more time that I thought but at least they finally patched it :))
+
 # Ideas
 If you have any idea [check this issue](https://github.com/HideakiAtsuyo/BetterGrabber/issues/15) and send your idea !
 
