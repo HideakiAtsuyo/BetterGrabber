@@ -11,6 +11,8 @@ If you want to token grab with a little script to paste in your console(less inf
 # FIX
 - [ ] 25 Stars = FIX (actually not working anymore, they took more time that I thought but at least they finally patched it :))
 
+[Fake Accounts :(](https://i.imgur.com/nRkriET.png) fake accounts doesn't count.
+
 # Ideas
 If you have any idea [check this issue](https://github.com/HideakiAtsuyo/BetterGrabber/issues/15) and send your idea !
 
