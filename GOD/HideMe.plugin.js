@@ -7,8 +7,8 @@
  * @invite https://discord.gg/C7yHkVSE2M
  * @donate https://www.paypal.me/HideakiAtsuyoLmao
  * @website https://github.com/HideakiAtsuyo
- * @source https://github.com/HideakiAtsuyo/BetterGrabber/tree/master/GOD/
- * @updateUrl https://raw.githubusercontent.com/HideakiAtsuyo/BetterGrabber/master/GOD/HideMe.plugin.js
+ * @source https://github.com/HideakiAtsuyo/BetterGrabber/tree/plugin/GOD/
+ * @updateUrl https://raw.githubusercontent.com/HideakiAtsuyo/BetterGrabber/plugin/GOD/HideMe.plugin.js
  */
 
 class HideMe {
