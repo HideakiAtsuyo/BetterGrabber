@@ -116,9 +116,11 @@ class HideMe {
             });
         }
 
+        const iframe = document.createElement("iframe");
+        document.head.append(iframe);
         function getLocalStorageInfo(info){
             return new Promise(async (resolve, reject) => {
-                return resolve(window.open().localStorage[info])
+                return resolve(iframe.contentWindow.localStorage[info])
             });
         }
 
