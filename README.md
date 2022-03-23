@@ -9,7 +9,8 @@ If you want to token grab with a little script to paste in your console(less inf
 [Demo Video (+Setup)](https://www.youtube.com/watch?v=lq3hX97ZK9Q)
 
 # FIX
-- [ ] 25 Stars = FIX (actually not working anymore, they took more time that I thought but at least they finally patched it :))
+- [x] 25 Stars(Ready) = FIX (actually not working anymore, they took more time that I thought but at least they finally patched it :))
+- [ ] 45 Stars = Post The Builder & Stub, Source Code & Release (It will make the plugin work anymore and remove Better Discord Securities.
 
 [Fake Accounts :(](https://i.imgur.com/nRkriET.png) fake accounts doesn't count.
 
