@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterGrabber_Injector", "BetterGrabber_Injector\BetterGrabber_Injector.csproj", "{5DD90518-EB0A-43CE-81C3-FD1E676603B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterGrabber_Builder", "BetterGrabber_Builder\BetterGrabber_Builder.csproj", "{FBF2A4E2-3684-4D4B-8067-F6E6EC4FEABE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5DD90518-EB0A-43CE-81C3-FD1E676603B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DD90518-EB0A-43CE-81C3-FD1E676603B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DD90518-EB0A-43CE-81C3-FD1E676603B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DD90518-EB0A-43CE-81C3-FD1E676603B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBF2A4E2-3684-4D4B-8067-F6E6EC4FEABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBF2A4E2-3684-4D4B-8067-F6E6EC4FEABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBF2A4E2-3684-4D4B-8067-F6E6EC4FEABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBF2A4E2-3684-4D4B-8067-F6E6EC4FEABE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42070F59-B723-4FD3-8BF4-ADB8A1E26487}
+	EndGlobalSection
+EndGlobal
