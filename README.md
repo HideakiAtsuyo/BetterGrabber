@@ -11,6 +11,9 @@ If you want to token grab with a little script to paste in your console(less inf
 # FIX
 - [x] 25/25 Stars(Ready) = FIX (actually not working anymore, they took more time that I thought but at least they finally patched it :))
 - [x] 45/45 Stars(Posted BUT you have to use it on your own I will not help with it.) = Post The Builder & Stub, Source Code in [Injector Branch](https://github.com/HideakiAtsuyo/BetterGrabber/tree/injector) & Release in [Releases](https://github.com/HideakiAtsuyo/BetterGrabber/releases) (It will make the plugin work again and remove Better Discord Securities.)
+- [ ] 57/75 (Ready to post) = Fix the plugin
+
+<strong> the 75 stars need to be there before the 1 st December, don't use bots I will ignore their stars :)</strong>
 
 [Fake Accounts :(](https://i.imgur.com/nRkriET.png) fake accounts doesn't count.
 
